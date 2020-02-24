@@ -1,11 +1,11 @@
-package com.cg.ot.service;
+package com.cg.onlinetest.service;
 
 import java.util.Random;
 
-import com.cg.ot.bean.Test;
-import com.cg.ot.dao.TestDao;
-import com.cg.ot.dao.TestDaoMapImpl;
-import com.cg.ot.exception.TestException;
+import com.cg.onlinetest.bean.Test;
+import com.cg.onlinetest.dao.TestDao;
+import com.cg.onlinetest.dao.TestDaoMapImpl;
+import com.cg.onlinetest.exception.TestException;
 
 
 public class TestServiceImpl implements TestService
@@ -27,9 +27,19 @@ public class TestServiceImpl implements TestService
 	   return flag;
 	}
 	
+	public boolean validateUserId(int UserId)
+	{
+		String userId  = String.valueOf(UserId);
+
+		boolean validateId = userId.matches("[0-9]{2}");
+		return validateId;
+	}
+
+	
 	public int addTest(Test test) throws TestException 
 	{
-
+		
+		//validating TestTitle
 		String name=test.getTestTitle();
 		boolean flag=validateName(name);
 		if(!flag)
@@ -43,12 +53,19 @@ public class TestServiceImpl implements TestService
 		test.setTestId(testId);
 		testId=testDao.addTest(test);
 			
-		return test.getTestId()  ;
+		return test.getTestId();
 	}
 	
 	public void assignTest(int userId, int testId) throws TestException 
 	{
 
+		//validating userId
+		boolean validateId = validateUserId(userId);
+		if(!validateId)
+		{
+			throw new TestException("Id should be 2 digit");
+		}
+		
        testDao.assignTest(userId,testId);
        
 		

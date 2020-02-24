@@ -1,4 +1,4 @@
-package com.cg.ot.exception;
+package com.cg.onlinetest.exception;
 
 public class TestException extends Exception
 {

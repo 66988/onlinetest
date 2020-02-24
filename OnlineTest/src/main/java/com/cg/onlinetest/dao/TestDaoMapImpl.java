@@ -1,13 +1,12 @@
-package com.cg.ot.dao;
+package com.cg.onlinetest.dao;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-import com.cg.ot.bean.Test;
-import com.cg.ot.exception.TestException;
+import com.cg.onlinetest.bean.Test;
+import com.cg.onlinetest.exception.TestException;
 
 public class TestDaoMapImpl implements TestDao
 {
@@ -61,7 +60,5 @@ public class TestDaoMapImpl implements TestDao
 				throw new TestException("TestId does not exist");
 			}
 		}
-		
-		
 
 }

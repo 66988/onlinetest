@@ -1,0 +1,6 @@
+projectKey=com.cg.demo:Project1
+serverUrl=http://localhost:9000
+serverVersion=6.5.0.27846
+dashboardUrl=http://localhost:9000/dashboard/index/com.cg.demo:Project1
+ceTaskId=AXB1bbNj-ECAQVPrirKq
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXB1bbNj-ECAQVPrirKq

@@ -1,8 +1,8 @@
-package com.cg.ot.dao;
+package com.cg.onlinetest.dao;
 
 
-import com.cg.ot.bean.Test;
-import com.cg.ot.exception.TestException;
+import com.cg.onlinetest.bean.Test;
+import com.cg.onlinetest.exception.TestException;
 
 public interface TestDao 
 {

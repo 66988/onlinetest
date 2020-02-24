@@ -1,4 +1,4 @@
-package com.cg.ot.bean;
+package com.cg.onlinetest.bean;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
